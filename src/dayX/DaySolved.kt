@@ -2,7 +2,6 @@ package dayX
 
 import Day
 import DayTest
-import kotlin.math.abs
 
 object DaySolved : Day {
 

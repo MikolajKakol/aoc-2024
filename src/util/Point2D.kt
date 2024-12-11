@@ -30,8 +30,16 @@ data class Point2D(val x: Int, val y: Int) : Comparable<Point2D> {
         return DirectedPoint2D(this, direction)
     }
 
-    fun manhattanDistance(b: Point2D): Int {
-        return abs(x - b.x) + abs(y - b.y)
+    fun manhattanDistance(other: Point2D): Int {
+        return abs(x - other.x) + abs(y - other.y)
+    }
+
+    operator fun minus(other: Point2D): Vector {
+        return Vector(x - other.x, y - other.y)
+    }
+
+    operator fun plus(other: Vector): Point2D {
+        return Point2D(x + other.x, y + other.y)
     }
 
     override fun compareTo(other: Point2D): Int {
