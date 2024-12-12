@@ -96,5 +96,5 @@ object DaySolved : Day {
 
 fun main() {
     val tester = DayTest(DaySolved)
-    tester.testAll(14, 396, 34, 1)
+    tester.testAll(14, 396, 34, 1200)
 }
